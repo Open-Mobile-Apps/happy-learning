@@ -3,11 +3,11 @@
   angular.module('happyLearning')
     .config(function ($stateProvider) {
       $stateProvider
-        .state('tab.home', {
+        .state('tabs.home', {
           url: '/home',
           views: {
-            'tab-home': {
-              templateUrl: 'pages/home/home.html',
+            'tabs-home': {
+              templateUrl: 'pages/home/home.view.html',
               controller: 'homeCtrl'
             }
           }

@@ -3,11 +3,11 @@
   angular.module('happyLearning')
     .config(function ($stateProvider) {
       $stateProvider
-        .state('tab', {
-          url: '/tab',
+        .state('tabs', {
+          url: '/tabs',
           abstract: true,
-          templateUrl: 'pages/tab/tab.html',
-          controller: 'tabCtrl'
+          templateUrl: 'pages/tabs/tabs.view.html',
+          controller: 'tabsCtrl'
         })
     });
 })(angular);
