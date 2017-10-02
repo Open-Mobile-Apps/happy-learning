@@ -30,8 +30,8 @@
 
           /* 直接进入模块(无动画) */
           directTo: function (route, params, callback) {
+            callback && callback(); // 执行回调
             var args = params || {};
-            callback && callback();
             if (ionic.Platform.isIOS()) {
               $ionicViewSwitcher.nextDirection('enter');
               return $state.go(route, args);
@@ -48,9 +48,10 @@
               "type": "fade",
               "duration": 0
             });
+            // 使用异步延时来处理回调
             var timer = $timeout(function () {
               timer = null; // 释放内存
-              callback && typeof callback === 'function' && callback();
+              callback && callback();
             });
           },
 

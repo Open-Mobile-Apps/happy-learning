@@ -6,14 +6,9 @@
     'ionic-native-transitions',
     'templates'
   ])
-    .run(function ($ionicPlatform, $state) {
+    .run(function ($ionicPlatform, appUtils) {
       $ionicPlatform.ready(function () {
-        console.log("ready");
-        function go (route, params) {
-          $state.go(route, params);
-        }
-        go("tab.home");
-
+        appUtils.doGo("tab/home"); // ready时跳转到首页
       });
     });
 })(angular);

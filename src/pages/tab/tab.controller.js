@@ -1,6 +1,5 @@
 (function (angular) {
     'use strict';
-  console.log(2);
   angular.module('happyLearning')
         .controller('tabCtrl', [
             '$scope',
