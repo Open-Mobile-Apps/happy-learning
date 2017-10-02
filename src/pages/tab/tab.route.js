@@ -7,7 +7,7 @@
           url: '/tab',
           abstract: true,
           templateUrl: 'pages/tab/tab.html',
-          controller: 'TabCtrl'
+          controller: 'tabCtrl'
         })
     });
 })(angular);

@@ -7,8 +7,8 @@
           url: '/home',
           views: {
             'tab-home': {
-              templateUrl:'pages/home/home.html',
-              controller: 'HomeCtrl'
+              templateUrl: 'pages/home/home.html',
+              controller: 'homeCtrl'
             }
           }
         })
