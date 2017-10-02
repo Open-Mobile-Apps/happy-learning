@@ -3,7 +3,7 @@
   // 配置模块，控制不同平台的兼容性
   angular.module('happyLearning')
     .config(function ($urlRouterProvider, $httpProvider, $ionicConfigProvider) {
-      // $urlRouterProvider.otherwise('/tabs/home'); // 默认路由
+      $urlRouterProvider.otherwise('/tabs/home'); // 默认路由
       ionic.Platform.isFullScreen = false; // 禁止全屏显示
 
       $ionicConfigProvider.views.transition('platform');
