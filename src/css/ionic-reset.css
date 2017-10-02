@@ -31,6 +31,14 @@ ion-nav-bar ion-header-bar {
   background-color: transparent;
 }
 
+.tabs {
+  border: none;
+}
+
+.tab-item {
+  max-width: none;
+}
+
 [nav-view-transition="ios"][nav-view-direction="forward"], [nav-view-transition="ios"][nav-view-direction="back"] {
   background-color: transparent;
 }
