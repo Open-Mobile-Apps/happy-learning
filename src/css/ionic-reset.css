@@ -1,0 +1,46 @@
+/* 去除默认样式 */
+ion-view ion-nav-bar .bar {
+  background-image: none !important;
+  border: none !important;
+}
+
+/* ionic 过渡时的突然消失的bug */
+ion-nav-bar.hide {
+  display: block !important;
+}
+
+ion-nav-bar ion-header-bar {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* 去除ion-item 点击后背景变灰 */
+.item.active,
+.item.activated,
+.item-complex.active .item-content,
+.item-complex.activated .item-content,
+.item .item-content.active,
+.item .item-content.activated,
+.item.active.item-complex > .item-content,
+.item.activated.item-complex > .item-content,
+.item-complex.active .item-content.item-complex > .item-content,
+.item-complex.activated .item-content.item-complex > .item-content,
+.item .item-content.active.item-complex > .item-content,
+.item .item-content.activated.item-complex > .item-content {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+[nav-view-transition="ios"][nav-view-direction="forward"], [nav-view-transition="ios"][nav-view-direction="back"] {
+  background-color: transparent;
+}
+
+.bar.bar-stable .title {
+  color: #fff;
+  padding: 0 50px;
+}
+
+.tab-item .icon {
+  width: auto;
+  height: auto;
+}
