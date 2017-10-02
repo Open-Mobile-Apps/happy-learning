@@ -2,7 +2,9 @@
   'use strict';
   angular.module('happyLearning', [
     'ionic',
-    'ionic-native-transitions'
+    'ngCordova',
+    'ionic-native-transitions',
+    'templates'
   ])
     .run(function ($ionicPlatform) {
       $ionicPlatform.ready(function () {

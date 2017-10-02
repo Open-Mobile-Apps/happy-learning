@@ -4,22 +4,42 @@
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, user-scalable=no, width=device-width">
   <title>happy-learning</title>
-  <link rel="stylesheet" href="./css/common.css">
+  <!-- build:css -->
+  <!-- inject:css:css -->
+  <link rel="stylesheet" href="lib/ionic/css/ionic.css">
+  <link rel="stylesheet" href="css/common.css">
+  <!-- endinject -->
+  <!-- endbuild -->
 
-  <script src="./lib/ionic/js/ionic.bundle.js"></script>
+  <!-- build:third-library-js -->
+  <!-- inject:lib:js -->
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
   <script src="lib/ngCordova/dist/ng-cordova.min.js"></script>
-  <script src="./lib/ionic-native-transitions/dist/ionic-native-transitions.min.js"></script>
+  <script src="lib/ionic-native-transitions/dist/ionic-native-transitions.min.js"></script>
+  <!-- endinject -->
+  <!-- endbuild -->
 
   <script src="cordova.js"></script>
 
-  <script src="./js/app/app.js"></script>
+  <!-- build:boot -->
+  <!-- inject:boot:js -->
+  <script src="js/app/app.js"></script>
+  <!-- endinject -->
+  <!-- endbuild -->
 
-  <!-- pages -->
-  <script src="./pages/tab/tab.controller.js"></script>
-  <script src="./pages/tab/tab.route.js"></script>
-  <script src="./pages/home/home.controller.js"></script>
-  <script src="./pages/home/home.route.js"></script>
+  <!-- build:js -->
+  <!-- inject:pages:js -->
+  <script src="pages/home/home.controller.js"></script>
+  <script src="pages/home/home.route.js"></script>
+  <script src="pages/tab/tab.controller.js"></script>
+  <script src="pages/tab/tab.route.js"></script>
+  <!-- endinject -->
+  <!-- endbuild -->
 
+  <!-- ANGULAR-TEMPLATECACHE -->
+  <!-- build:templates -->
+  <script src="./js/app/app.templates.js"></script>
+  <!-- endbuild -->
 </head>
 <body ng-app="happyLearning">
 <ion-nav-view></ion-nav-view>
