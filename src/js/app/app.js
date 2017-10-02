@@ -6,9 +6,14 @@
     'ionic-native-transitions',
     'templates'
   ])
-    .run(function ($ionicPlatform) {
+    .run(function ($ionicPlatform, $state) {
       $ionicPlatform.ready(function () {
-        console.log(1);
+        console.log("ready");
+        function go (route, params) {
+          $state.go(route, params);
+        }
+        go("tab.home");
+
       });
     });
 })(angular);
