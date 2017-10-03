@@ -1,0 +1,57 @@
+.tabs{
+  background-color: #f9f9f9;
+  background-image: none;
+}
+
+.tab-icon {
+  background: url(../images/tab-icons.png) no-repeat;
+}
+
+.tab-item .tab-icon {
+  width: 20px;
+  height: 20px;
+  margin-top: 6px;
+  background-size: 100% auto;
+}
+
+.tab-item .tab-icon ~ .tab-title {
+  font-size: 10px;
+  line-height: 22px;
+  display: block;
+}
+
+.tabs .tab-item-active {
+  color: #178cfe;
+}
+
+.tab-icon-home {
+  background-position: 0 0;
+}
+
+.tab-icon-home-active {
+  background-position: 0 -22px;
+}
+
+.tab-icon-category {
+  background-position: 0 -44px;
+}
+
+.tab-icon-category-active {
+  background-position: 0 -66px;
+}
+
+.tab-icon-discover {
+  background-position: 0 -88px;
+}
+
+.tab-icon-discover-active {
+  background-position: 0 -110px;
+}
+
+.tab-icon-my {
+  background-position: 0 -131px;
+}
+
+.tab-icon-my-active {
+  background-position: 0 -153px;
+}
