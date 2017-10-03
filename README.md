@@ -9,4 +9,4 @@ A demonstration for ionic technology stack, version 1.3.3
 ## Production stage
 
 ## License
-happy-learning is (MIT licensed)[./].
+happy-learning is [MIT licensed](./LICENSE).
