@@ -1,6 +1,20 @@
-.tabs{
+.tabs {
   background-color: #f9f9f9;
   background-image: none;
+}
+
+.tab-nav.tabs:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  border-top: 1px solid #ccc;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
 }
 
 .tab-icon {
