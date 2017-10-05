@@ -1,5 +1,19 @@
-<ion-view view-title="首页" class="home" cache-view="true">
+<ion-view class="home" cache-view="true">
+  <!-- search box -->
+  <ion-nav-bar class="bar-stable">
+    <div>search zone</div>
+  </ion-nav-bar>
   <ion-content lazy-scroll has-bouncing="true" scrollbar-y="true">
-    I am home!
+    <!-- carousel -->
+    <ion-slide-box class="home-top-slide cur{{slide_index}}" auto-play="true" slide-interval="5000" show-pager="true"
+                   delegate-handle="home-top-slider" on-slide-changed="fn.slideHasChanged($index)">
+      <ion-slide ng-repeat="item in viewData.topSlider track by $index">
+        <a ng-href="" nav-direction="forward">
+          <div class="box">
+            <img ng-src="{{item.cover}}" alt="" />
+          </div>
+        </a>
+      </ion-slide>
+    </ion-slide-box>
   </ion-content>
 </ion-view>
