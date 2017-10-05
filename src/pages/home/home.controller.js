@@ -3,10 +3,9 @@
   angular.module('happyLearning')
     .controller('homeCtrl', [
       '$scope',
-      '$rootScope',
       '$ionicSlideBoxDelegate',
       '$timeout',
-      function ($scope, $rootScope,  $ionicSlideBoxDelegate, $timeout) {
+      function ($scope, $ionicSlideBoxDelegate, $timeout) {
         /* 初始化数据成员 */
         var fn = $scope.fn = {};
         var viewData = $scope.viewData = {}; // 视图数据绑定
@@ -19,7 +18,8 @@
 
         /* 初始化页面设置 */
         function pageInit() {
-          getCarousel();
+          getCarousel(); // 获取轮播数据
+          getCategory(); // 获取滚动分类数据
         }
 
         // 首页轮播
@@ -36,6 +36,22 @@
             $ionicSlideBoxDelegate.$getByHandle('home-top-slider').loop(true); // 解决网络加载时候的bug
             $timeout.cancel(timer); // 移除定时器
           });
+        }
+
+        // 轮播下的课程类别 mock fake data
+        function getCategory() {
+          viewData.scrollCate = [
+            {name: "互联网产品", code: "00001"},
+            {name: "编程语言", code: "00002"},
+            {name: "移动开发", code: "00003"},
+            {name: "软件测试", code: "00004"},
+            {name: "云计算", code: "00005"},
+            {name: "大数据", code: "00006"},
+            {name: "游戏开发", code: "00007"},
+            {name: "IT认证", code: "00008"},
+            {name: "网络营销", code: "00009"},
+            {name: "兴趣生活", code: "00010"}
+          ];
         }
 
         // 每次滑动到当前模块,执行一个动画

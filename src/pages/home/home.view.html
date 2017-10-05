@@ -1,9 +1,6 @@
 <ion-view class="home" cache-view="true">
   <!-- search box -->
-  <ion-nav-bar class="bar-stable">
-    <style>
-
-    </style>
+  <ion-nav-bar>
     <div class="home-header-bar flex-box">
       <div class="home-header-logo"></div>
       <div class="home-header-search flex">
@@ -13,17 +10,30 @@
       </div>
     </div>
   </ion-nav-bar>
-  <ion-content lazy-scroll has-bouncing="true" scrollbar-y="true">
+  <ion-content lazy-scroll has-bouncing="true" scrollbar-y="true" overflow-scroll="false">
     <!-- carousel -->
-    <ion-slide-box class="home-top-slide cur{{slide_index}}" auto-play="true" slide-interval="5000" show-pager="true"
+    <ion-slide-box auto-play="true" slide-interval="5000" show-pager="true"
                    delegate-handle="home-top-slider" on-slide-changed="fn.slideHasChanged($index)">
       <ion-slide ng-repeat="item in viewData.topSlider track by $index">
         <a ng-href="" nav-direction="forward">
           <div class="box">
-            <img ng-src="{{item.cover}}" alt="" />
+            <img ng-src="{{item.cover}}" alt=""/>
           </div>
         </a>
       </ion-slide>
     </ion-slide-box>
+    <!-- home-course-category scroll -->
+    <div class="home-course-category-wrap">
+      <ion-scroll zooming="true" direction="x" scrollbar-x="false">
+        <div class="home-course-category">
+          <ul class="home-course-category-list">
+            <li ng-repeat="item in viewData.scrollCate track by $index">{{item.name}}</li>
+          </ul>
+        </div>
+      </ion-scroll>
+      <div class="home-course-category-add">
+        <a href="javascript:;" class="home-course-category-add-link"></a>
+      </div>
+    </div>
   </ion-content>
 </ion-view>
