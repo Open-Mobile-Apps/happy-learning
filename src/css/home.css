@@ -2,6 +2,38 @@
   background-color: #f2f2f2;
 }
 
+/* home header */
+.home-header-bar {
+  position: relative;
+  z-index: 99;
+}
+
+.home-header-logo {
+  width: 28px;
+  height: 45px;
+  margin: 0 10px;
+  background: url(../images/logo-book-52.png) no-repeat center;
+  background-size: 100% auto;
+}
+
+.home-header-search-inner {
+  background-color: #f2f2f2;
+  color: #bdbdbd;
+  text-align: center;
+  margin: 10px 12px 0 0;
+  height: 25px;
+  line-height: 25px;
+  font-size: 13px;
+}
+
+.home-header-search-inner .ion-ios-search {
+  font-size: 17px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 2px 0 0;
+}
+
+/* home slider */
 .home .slider {
   width: 100%;
   overflow: hidden;
