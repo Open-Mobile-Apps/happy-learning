@@ -1,0 +1,18 @@
+[
+  {
+    "courseId": 0,
+    "cover": "./images/temp/home-carousel-0.jpg"
+  },
+  {
+    "courseId": 1,
+    "cover": "./images/temp/home-carousel-1.jpg"
+  },
+  {
+    "courseId": 2,
+    "cover": "./images/temp/home-carousel-2.jpg"
+  },
+  {
+    "courseId": 3,
+    "cover": "./images/temp/home-carousel-3.jpg"
+  }
+]

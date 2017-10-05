@@ -25,18 +25,21 @@
 
         // 首页轮播
         function getCarousel() {
-          // 模拟的假数据 mock fake data
-          viewData.topSlider = [
-            {courseId: 0, cover: "./images/temp/home-carousel-0.jpg"},
-            {courseId: 1, cover: "./images/temp/home-carousel-1.jpg"},
-            {courseId: 2, cover: "./images/temp/home-carousel-2.jpg"},
-            {courseId: 3, cover: "./images/temp/home-carousel-3.jpg"}
-          ];
-          var timer = $timeout(function () {
-            $ionicSlideBoxDelegate.$getByHandle('home-top-slider').update();
-            $ionicSlideBoxDelegate.$getByHandle('home-top-slider').loop(true); // 解决网络加载时候的bug
-            $timeout.cancel(timer); // 移除定时器
-          });
+          $http.get("./data/home.topSlider.json")
+            .success(function (data) {
+              viewData.topSlider = data;
+            })
+            .error(function (e) {
+              console.log(e);
+            })
+            .finally(function () {
+              // 更新轮播控件
+              var timer = $timeout(function () {
+                $ionicSlideBoxDelegate.$getByHandle('home-top-slider').update();
+                $ionicSlideBoxDelegate.$getByHandle('home-top-slider').loop(true); // 解决网络加载时候的bug
+                $timeout.cancel(timer); // 移除定时器
+              });
+            });
         }
 
         // 轮播下的课程类别
